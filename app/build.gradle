@@ -1,0 +1,80 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "ram234.com.googlemapsgoogleplaces"
+        minSdkVersion 21
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            //shrinkResources true
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:animated-vector-drawable:26.1.0'
+    implementation 'com.android.support:mediarouter-v7:25.2.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    implementation 'com.google.android.gms:play-services-plus:11.8.0'
+    implementation 'com.google.android.gms:play-services-auth:11.8.0'
+    implementation 'com.google.android.gms:play-services-base:11.8.0'
+    implementation 'com.google.android.gms:play-services-identity:11.8.0'
+    implementation 'com.google.android.gms:play-services-analytics:11.8.0'
+    implementation 'com.google.android.gms:play-services-awareness:11.8.0'
+    implementation 'com.google.android.gms:play-services-cast:11.8.0'
+    implementation 'com.google.android.gms:play-services-gcm:11.8.0'
+    implementation 'com.google.android.gms:play-services-drive:11.8.0'
+    implementation 'com.google.android.gms:play-services-fitness:11.8.0'
+    implementation 'com.google.android.gms:play-services-location:11.8.0'
+    implementation 'com.google.android.gms:play-services-maps:11.8.0'
+    implementation 'com.google.android.gms:play-services-ads:11.8.0'
+    implementation 'com.google.android.gms:play-services-places:11.8.0'
+    implementation 'com.google.android.gms:play-services-vision:11.8.0'
+    implementation 'com.google.android.gms:play-services-nearby:11.8.0'
+    implementation 'com.google.android.gms:play-services-panorama:11.8.0'
+    implementation 'com.google.android.gms:play-services-games:11.8.0'
+    implementation 'com.google.android.gms:play-services-safetynet:11.8.0'
+    implementation 'com.google.android.gms:play-services-wallet:11.8.0'
+    implementation 'com.google.android.gms:play-services-wearable:11.8.0'
+
+
+    implementation 'com.google.firebase:firebase-core:11.8.0'	//Analytics
+    implementation 'com.google.firebase:firebase-database:11.8.0'	//Realtime Database
+    implementation 'com.google.firebase:firebase-firestore:11.8.0'	//Cloud Firestore
+    implementation 'com.google.firebase:firebase-storage:11.8.0'	//Storage
+    implementation 'com.google.firebase:firebase-crash:11.8.0'	//Crash Reporting
+    implementation 'com.google.firebase:firebase-auth:11.8.0' 	//Authentication
+    implementation 'com.google.firebase:firebase-messaging:11.8.0'	//Cloud Messaging
+    implementation 'com.google.firebase:firebase-config:11.8.0'	//Remote Config
+    implementation 'com.google.firebase:firebase-invites:11.8.0'	//Invites and Dynamic Links
+    implementation 'com.google.firebase:firebase-ads:11.8.0'	//AdMob
+    implementation 'com.google.firebase:firebase-appindexing:11.8.0'	//App Indexing
+    implementation 'com.google.firebase:firebase-perf:11.8.0'	//Performance Monitoring
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true
+    }
+    //implementation 'com.google.firebase:firebase-core:11.8.0'
+
+
+
+}
+//multiDexEnabled true;
+
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'io.fabric'
